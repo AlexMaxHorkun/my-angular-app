@@ -5,13 +5,13 @@ import {HeroDetailComponent} from "./hero-detail.component";
 import {HeroesComponent} from "./heroes.component";
 import {HeroesMainComponent} from "./heroes-main.component";
 
-export const routing: ModuleWithProviders = RouterModule.forChild([
+export const heroRouting: ModuleWithProviders = RouterModule.forChild([
     {
-        path: '',
+        path: 'heroes',
         component: HeroesMainComponent,
         children: [
             {
-                path: '',
+                path: 'heroes',
                 children: [
                     { path: 'hero-add', component: HeroAddComponent },
                     { path: 'detail/:id', component: HeroDetailComponent },

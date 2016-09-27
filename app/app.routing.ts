@@ -13,13 +13,5 @@ const appRoutes: Routes = [
         redirectTo: 'dashboard',
         pathMatch: 'full'
     },
-    {
-        path: 'heroes',
-        loadChildren: 'app/hero/hero.module#HeroModule'
-    },
-    {
-        path: 'dashboard',
-        loadChildren: 'app/dashboard/dashboard.module#DashboardModule'
-    },
 ];
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

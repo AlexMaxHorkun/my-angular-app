@@ -2,6 +2,6 @@ import {ModuleWithProviders} from "@angular/core";
 import {RouterModule} from "@angular/router";
 import {DashboardComponent} from "./dashboard.component";
 
-export const routing: ModuleWithProviders = RouterModule.forChild([
-    { path: '', component: DashboardComponent }
+export const dashboardRouting: ModuleWithProviders = RouterModule.forChild([
+    { path: 'dashboard', component: DashboardComponent }
 ]);

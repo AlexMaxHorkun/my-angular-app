@@ -1,11 +1,11 @@
 import { NgModule }      from '@angular/core';
-import {routing} from "./dashboard.routing";
+import {dashboardRouting} from "./dashboard.routing";
 import {DashboardComponent} from "./dashboard.component";
 import {SharedModule} from "../shared/shared.module";
 
 
 @NgModule({
-    imports: [ SharedModule, routing],
+    imports: [ SharedModule, dashboardRouting],
     declarations: [DashboardComponent],
     bootstrap: [DashboardComponent]
 })
