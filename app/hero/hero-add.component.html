@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>New hero</h1>
+    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" required [(ngModel)]="hero.name" name="name" #name="ngModel" minlength="6" matches="^[^\*\<\>]+$">
+            <div *ngIf="name.errors && name.dirty" class="alert alert-danger">
+                <div *ngIf="name.errors.required">Name is required</div>
+                <div *ngIf="name.errors.minlength">Name must be over 6 chars</div>
+                <div *ngIf="name.errors.notMatching">Name contains *, &lt;, or &gt;</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="alterEgo">Alter Ego</label>
+            <input type="text" class="form-control" id="alterEgo" [(ngModel)]="hero.alterEgo" name="alterEgo">
+        </div>
+        <button type="submit" class="btn btn-default" [disabled]="!heroForm.form.valid">Submit</button>
+        <button (click)="clearHero()">Clear</button>
+    </form>
+</div>
